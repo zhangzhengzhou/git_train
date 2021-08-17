@@ -1,0 +1,70 @@
+Hello~I am XiaoqingLi. (Xiali)
+I am practicing git command line:
+
+--初始化一个本地仓库
+git init 
+
+--新增修改文件并且提交到git
+git add <filename>
+git commit -m "feat: add comments content"
+
+--查看状态
+git status
+
+--查看历史纪录history和状态status
+git log
+git relog
+
+--工作区回退 git checkout <filename>
+For example:
+Frist to add one file(for example:a.txt) and commit it 到仓库区
+
+git add a.txt 
+git commit -m "feat:add a.txt"
+
+Then modify the a.txt, Finaly do following : 
+git checkout a.txt     #back modify 之前
+
+--暂存区回退 reset
+git reset --hard  <commitedID> 
+
+--创建分支
+git branch <name>  
+
+--创建+切换分支     
+git checkout -b <name> 
+
+--删除分支，前提是分支内容已经合并到主干了 
+git branch -d <name>     
+
+--强制删除分支
+git branch -D <name>
+
+--查看分支    
+git branch 
+       
+--合并某分支到当前分支       
+git merge <name>         
+
+--把修改储藏起来
+git stash
+--取出储藏的修改
+git stash pop
+
+
+远程仓库使用
+git remote add origin <远程地址> 关联远程仓库
+git push -u origin master  第一次使用命令进行推送
+
+--把qa分支推送到远程仓库
+git checkout qa 
+git push origin qa //第一次使用和远程qa分支想关联
+
+--删除远程分支
+git push origin --delete qa
+
+--从远程仓库克隆
+git clone https://github.com/.git -b qa yanshi
+•-b qa: 表示克隆qa分支，如果不加，默认拷贝master分支
+•yanshi: 把克隆下来的内容放在"yanshi"文件夹下面
+
